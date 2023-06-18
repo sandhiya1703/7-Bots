@@ -1,0 +1,108 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Temp" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="881.3333333333334,1708" sap2010:WorkflowViewState.IdRef="Temp_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Temp" sap:VirtualizedContainerService.HintSize="563.3333333333334,1643.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Write Values to Columns" sap:VirtualizedContainerService.HintSize="501.3333333333333,1532.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:WriteCellX Cell="[CurrentRow(&quot;Street Address&quot;)]" DisplayName="Write Street Address" sap:VirtualizedContainerService.HintSize="439.3333333333333,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CurrentRow(&quot;Address&quot;).ToString.Split(&quot;,&quot;c)(0)]" />
+      <ueab:WriteCellX Cell="[CurrentRow(&quot;City&quot;)]" DisplayName="Write City" sap:VirtualizedContainerService.HintSize="439.3333333333333,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[CurrentRow(&quot;Address&quot;).ToString.Split(&quot;,&quot;c)(1).Trim]" />
+      <ueab:WriteCellX Cell="[CurrentRow(&quot;ZIP&quot;)]" DisplayName="Write ZIP" sap:VirtualizedContainerService.HintSize="439.3333333333333,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[CurrentRow(&quot;Address&quot;).ToString.Split(&quot;,&quot;c)(2).Trim.Split(&quot; &quot;c).Last]" />
+      <ueab:WriteCellX Cell="[CurrentRow(&quot;Price per Sqft&quot;)]" DisplayName="Write Price per Sqft" sap:VirtualizedContainerService.HintSize="439.3333333333333,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[CurrentRow(&quot;Price&quot;)/ CurrentRow(&quot;Sqft&quot;)]" />
+      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439.3333333333333,141.33333333333334" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(Location.ToUpper).Range(&quot;H:H&quot;)]">
+        <ueab:FormatRangeX.Alignment>
+          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+        </ueab:FormatRangeX.Alignment>
+        <ueab:FormatRangeX.Font>
+          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+        </ueab:FormatRangeX.Font>
+        <ueab:FormatRangeX.Format>
+          <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="False" />
+        </ueab:FormatRangeX.Format>
+      </ueab:FormatRangeX>
+      <ueab:DeleteColumnX ColumnName="Address" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="439.3333333333333,165.33333333333334" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1" Range="[Excel.Sheet(Location.ToUpper)]" />
+      <ueab:SortX DisplayName="Sort Range by Price per Sqft" HasHeaders="True" sap:VirtualizedContainerService.HintSize="439.3333333333333,216.66666666666666" sap2010:WorkflowViewState.IdRef="SortX_1" Range="[Excel.Sheet(Location.ToUpper)]">
+        <ueab:SortX.Body>
+          <ActivityAction>
+            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:SortColumnX ColumnName="Price per Sqft" DisplayName="Sort By Bed" sap:VirtualizedContainerService.HintSize="382,64" sap2010:WorkflowViewState.IdRef="SortColumnX_1" SortDirection="Ascending" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:SortX.Body>
+      </ueab:SortX>
+    </Sequence>
+  </Sequence>
+</Activity>
